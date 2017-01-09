@@ -1,2 +1,2 @@
-# phpOBIA
-php Objective Business Integration Analysis
+# phpobia
+php Objects and Business Integration Analysis Framework
