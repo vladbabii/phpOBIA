@@ -1,2 +1,2 @@
-# phpobia
-php Objects and Business Integration Analysis Framework
+# PHPobia
+PHP Objects and Business Integration Analysis Framework
