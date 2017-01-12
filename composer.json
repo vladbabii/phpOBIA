@@ -1,0 +1,19 @@
+{
+    "name": "vladbabii/phpobia",
+    "description": "PHP Objects and Business Integration Automation",
+    "type": "library",
+    "license": "Free to use",
+    "authors": [
+        {
+            "name": "Vlad Babii",
+            "email": "vlad@babii.ro"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+		"psr-0" : {
+			"Phpobia": "src/"
+		}
+	}
+}
