@@ -1,12 +1,14 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
+require __DIR__.'/classes/SimpleTestClasses.php';
+
 class AnalyzerSimpleTestCase extends TestCase {
 
     public function testCreation(){
 
 
-        $AI = new DumbAI();
+        $AI = new \Phpobia\AnalyzerSimple();
 
         $AI->register('AiPredictDeathOfHuman');
 
@@ -22,21 +24,15 @@ class AnalyzerSimpleTestCase extends TestCase {
         $bob->inject('is_smoker',true);
         $bob->phpobiaSetAnalyzer($AI);
 
-        echo $alice.PHP_EOL;
-        echo $bob.PHP_EOL;
-        echo '--------'.PHP_EOL;
-
         $alice->needs('death_ts');
         $alice->resolve();
+
+        $this->assertEquals(1531350624,$alice->stuff['death_ts']);
+
         $bob->needs('death_ts');
         $bob->resolve();
 
-
-        echo $alice.PHP_EOL;
-        echo $bob.PHP_EOL;
-
-        echo PHP_EOL.PHP_EOL;
-
+        $this->assertEquals(1397551584,$bob->stuff['death_ts']);
     }
 
 }
